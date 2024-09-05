@@ -76,6 +76,36 @@ header('Content-Type: text/html; charset=UTF-8');
     }
     unset($a,$b,$c,$z);
 
+    echo "<h2> Ejercicio 5</h2>";
+    $a = "7 personas";
+    $b = (integer) $a;
+    $a = "9E3";
+    $c = (double) $a;
+    echo "$a";
+    echo "<br>";
+    echo "$b";
+    echo "<br>";
+    echo "$c";
+    unset($a,$b,$c);
+
+    
+    echo "<h2> Ejercicio 6</h2>";
+
+    $a = "0";
+    $b = "TRUE";
+    $c = FALSE;
+    $d = ($a OR $b);
+    $e = ($a AND $c);
+    $f = ($a XOR $b);
+
+    echo "Valor de \$a: " . var_export($a, true) . "<br>";
+    echo "Valor de \$b: " . var_export($b, true) . "<br>";
+    echo "Valor de \$c: " . var_export($c, true) . "<br>";
+    echo "Valor de \$d: " . var_export($d, true) . "<br>";
+    echo "Valor de \$e: " . var_export($e, true) . "<br>";
+    echo "Valor de \$f: " . var_export($f, true) . "<br>";
+
+        
 
 
     ?>
