@@ -106,7 +106,30 @@ header('Content-Type: text/html; charset=UTF-8');
     echo "Valor de \$f: " . var_export($f, true) . "<br>";
 
         
+    echo "<h2> Ejercicio 7</h2>";
 
+   
+    echo "Versión de PHP: " . phpversion() . "<br>";
+    if (isset($_SERVER['SERVER_SOFTWARE'])) {
+        $apacheVersion = $_SERVER['SERVER_SOFTWARE'];
+        preg_match('/Apache\/([^\s]+)/', $apacheVersion, $matches);
+        $apacheVersion = $matches[1] ?? 'No disponible';
+        echo "Versión de Apache: " . $apacheVersion . "<br>";
+    } else {
+        echo "Versión de Apache: No disponible<br>";
+    }
+
+    if (isset($_SERVER['SERVER_OS'])) {
+        echo "Sistema operativo del servidor: " . $_SERVER['SERVER_OS'] . "<br>";
+    } else {
+        echo "Sistema operativo del servidor: No disponible<br>";
+    }
+
+    if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+        echo "Idioma del navegador: " . $_SERVER['HTTP_ACCEPT_LANGUAGE'] . "<br>";
+    } else {
+        echo "Idioma del navegador: No disponible<br>";
+    }
 
     ?>
 
