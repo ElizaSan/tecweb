@@ -32,6 +32,14 @@ header('Content-Type: text/html; charset=UTF-8');
     $c = &$a;
     echo "$c<br>";
 
+    $a = "PHP server";
+    echo "$a<br>";
+    $b = &$a;
+    echo "$b<br>";
+    echo "<br> Lo que ocurrio es que reasignamos el valor en la variable a, y como b esta apuntando a la direccion de a entonces esto cambio tambien el contenido de b ya que ahora apunta a PHP server<br>";
+    unset($a,$b,$c);
+
+
 
     ?>
 
