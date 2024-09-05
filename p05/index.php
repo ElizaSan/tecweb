@@ -68,6 +68,14 @@ header('Content-Type: text/html; charset=UTF-8');
     var_dump($z); 
     echo "<br>";
 
+    echo "<h2> Ejercicio 4</h2>";
+    foreach ($GLOBALS as $key => $value) {
+        echo "\$$key = ";
+        var_dump($value);
+        echo "<br>";
+    }
+    unset($a,$b,$c,$z);
+
 
 
     ?>
