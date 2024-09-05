@@ -24,6 +24,14 @@ header('Content-Type: text/html; charset=UTF-8');
     echo "<b>".'$_element1: Valida - '."</b>"."Las variables pueden empezar con guion bajo.<br>";
     echo "<b>".'$house*5: Invalida - '."</b>".'Aunque comienza correctamente con $, contiene un carácter especial (*), que no está permitido en los nombres de variables.'."<br>";
    
+     echo "<br><h2> Ejercicio 2</h2>";
+    $a = "ManejadorSQL";
+    echo "$a<br>";
+    $b = 'MySQL';
+    echo "$b<br>";
+    $c = &$a;
+    echo "$c<br>";
+
 
     ?>
 
