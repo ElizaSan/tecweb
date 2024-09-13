@@ -72,6 +72,30 @@
                     } 
     ?>
 
+<h2>Ejercicio 3</h2>
+    <p>Utiliza un ciclo while para encontrar el primer número entero obtenido aleatoriamente,
+    pero que además sea múltiplo de un número dado.</p>
+
+    <br>
+    <form action="http://localhost/tecweb/practicas/p07/index.php" method="GET">
+        Elige un numero: <input type="text" name="numero3"><br>
+        <input type="submit">
+    </form>
+
+    <?php
+            if(isset($_GET['numero3']))
+            {
+                
+                    $num = $_GET['numero3'];
+                    $numero3 = 0;
+                    do {
+                        $numero3 = rand();
+                        
+                    } while ($numero3%$num==0);
+                    echo "<p> El primer aleatorio que es multiplo de tu numero elegido es:  ". $numero3 ."<p>"; 
+                
+            }
+        ?>
     
 
 
