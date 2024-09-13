@@ -25,30 +25,51 @@
                 $num = $_POST['numero'];
                 if ($num%5==0 && $num%7==0)
                 {
-                    echo '<h3>R= El número '.$num.' SÍ es múltiplo de 5 y 7.</h3>';
+                    echo '<h3>Respuesta: El número '.$num.' SÍ es múltiplo de 5 y 7.</h3>';
                 }
                 else
                 {
-                    echo '<h3>R= El número '.$num.' NO es múltiplo de 5 y 7.</h3>';
+                    echo '<h3>Respuesta: El número '.$num.' NO es múltiplo de 5 y 7.</h3>';
                 }
             }
         ?>
 
 <h2>Ejercicio 2</h2>
-    <p>Escribir programa para comprobar si un número es un múltiplo de 5 y 7</p>
+    <p>Generación repetitiva de tres números aleatorios</p>
+
+    <br>
+    <form action="http://localhost/tecweb/practicas/p07/index.php" method="post">
+        Generar tres num random
+        <input name= "numero2" type="submit">
+    </form>
+
     <?php
-        if(isset($_GET['numero']))
-        {
-            $num = $_GET['numero'];
-            if ($num%2==0)
-            {
-                echo '<h3>R= El número '.$num.' es par</h3>';
-            }
-            else
-            {
-                echo '<h3>R= El número '.$num.' es impar</h3>';
-            }
-        }
+                if(isset($_POST["numero2"]))
+                    {
+                        $matriz = [[]];
+                        $indice = 0;
+                        $condicion = false;
+                        while($condicion == false){
+                            $arreglo = [];
+                            for ($i=0; $i < 3; $i++) { 
+                                $arreglo[$i]=rand(100,999);
+                                if ($i!=2) {
+                                    echo $arreglo[$i]. ", ";
+                                }else{
+                                    echo $arreglo[$i];
+                                }
+            
+                            }   
+                            $matriz[$indice++] = $arreglo;
+                            
+                            echo "</br>";
+                            if($arreglo[0]%2!=0 && $arreglo[1]%2==0 && $arreglo[2]%2!=0){
+                                $condicion=true;
+                            }
+                        }
+                        $numeros = $indice*3;
+                        echo "<p>". $numeros . " números obtenidos en " .$indice . " iteraciones"; 
+                    } 
     ?>
 
     
