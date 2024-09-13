@@ -97,7 +97,36 @@
             }
         ?>
     
+    <h2>Ejercicio 4</h2>
+    <p>Crear un arreglo cuyos índices van de 97 a 122 y cuyos valores son las letras de la ‘a’
+    a la ‘z’. Usa la función chr(n) que devuelve el caracter cuyo código ASCII es n para poner
+    el valor en cada índice.</p>
 
+    <form action="http://localhost/tecweb/practicas/p07/index.php" method="GET">
+        Crear arreglo <input name="numero4" type="submit">
+        
+    </form>
+
+    <br>
+    <?php
+    
+    if(isset($_GET['numero4'])){
+        $letras = [];
+        for ($i=97; $i < 123 ; $i++) { 
+          $letras["$i"] = chr($i);
+        }
+        echo "<table>  <tr> <th>Valor</th> <th>Letra</th> </tr>";
+        foreach ($letras as $item => $value){
+          echo "<tr>";
+          echo "<td>".$item."</td>";
+          echo "<td>".$value."</td>"; 
+          echo "</tr>";
+      }   
+        echo "</table>";
+      }
+
+
+    ?>
 
 </body>
 </html>
