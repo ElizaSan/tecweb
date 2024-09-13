@@ -104,7 +104,6 @@
 
     <form action="http://localhost/tecweb/practicas/p07/index.php" method="GET">
         Crear arreglo <input name="numero4" type="submit">
-        
     </form>
 
     <br>
@@ -125,8 +124,44 @@
         echo "</table>";
       }
 
+    ?>
+
+
+<h2>Ejercicio 5</h2>
+    <p>Usar las variables $edad y $sexo en una instrucción if para identificar una persona de
+    sexo “femenino”, cuya edad oscile entre los 18 y 35 años y mostrar un mensaje de
+    bienvenida apropiado.</p>
+
+    <form action="http://localhost/tecweb/practicas/p07/index.php" method="POST">
+        Ingresa edad: <input type="text" name="edad" >
+        Ingresa sexo:<input type="text" name="sexo" >
+        <input type="submit">
+        
+    </form>
+
+
+    <?php
+    
+    if(isset($_POST['edad']) && isset($_POST['sexo'])){
+
+        if ($edad>=18 && $edad<=35)
+        {
+            if($sexo == "femenino"){
+                echo '<h3>Bienvenida, usted está en el rango de edad permitido.</h3>';
+            }
+        }
+        else
+        {
+            echo '<h3>Lo siento, no cuenta con los requisitos.</h3>'; 
+        }
+    }
+
 
     ?>
+
+
+
+
 
 </body>
 </html>
