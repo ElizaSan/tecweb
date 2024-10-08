@@ -12,11 +12,13 @@
   <p>Ingresa la información del producto en el siguiente formulario</p>
  
  
-    <form id="miFormulario" onsubmit="return validarFormulario()">
+    <form id="miFormulario" onsubmit="return validarFormulario()" action="procesar.php" method="POST">
     
     
-    <!-- Vinculo mi archivo JavaScript -->
-    <script src="validacion.js"></script>
+    <!-- Vinculando mi archivo JavaScript 
+    <script src="./validacion.js"></script> 
+    -->
+    
 
     <h2>Datos de productos</h2>
  
@@ -24,7 +26,7 @@
       <legend>Información</legend>
  
       <ul>
-        <li><label for="form-name">Nombre:</label> <input type="text" name="nombre" id="form-name" maxlength="50" required></li>
+        <li><label for="form-name">Nombre:</label> <input type="text" name="nombre" id="form-name" maxlength="100" required></li>
         <li> 
         <legend>Marca: </legend>
             <select name="marca" size="1" id="form-marca" required>
@@ -40,11 +42,11 @@
                 <option>Volkswagen</option>
             </select>
         </li>       
-        <li><label for="form-modelo">Modelo:</label> <input type="text" name="modelo" id="form-modelo" maxlength="25" required></li>
-        <li><label for="form-precio">Precio:</label> <input type="number" name="precio" step="0.01" min="0" id="form-precio"></li>
+        <li><label for="form-modelo">Modelo:</label> <input type="text" name="modelo" id="form-modelo" maxlength="25" pattern="[A-Za-z0-9]+" required></li>
+        <li><label for="form-precio">Precio:</label> <input type="number" name="precio" step="0.01" min="0" id="form-precio" required></li>
         <li><label for="form-detalle">Descripción:</label><br><textarea name="detalle" rows="4" cols="60" id="form-detalle" maxlength="250" placeholder="No más de 250 caracteres."></textarea></li>
         <li><label for="form-unidad">Unidades:</label> <input type="number" name="unidad" step="1" min="0" id="form-unidad" required></li>
-        <li><label for="form-imagen">Imagen:</label> <input type="text" name="imagen" id="form-imagen"></li>
+        <li><label for="form-imagen">Imagen:</label> <input type="text" name="imagen" id="form-imagen" value="auto.jpg"></li>
  
       </ul>
     </fieldset>

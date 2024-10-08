@@ -18,13 +18,13 @@
         <fieldset>
             <legend>Actualiza los datos del producto:</legend>
             <ul>
-                <li><label>Nombre:</label> <input type="text" name="name" value="<?= !empty($_POST['nombre'])?$_POST['nombre']:$_GET['nombre'] ?>"></li>
-                <li><label>Marca:</label> <input type="text" name="age" value="<?= !empty($_POST['edad'])?$_POST['edad']:$_GET['edad'] ?>"></li>
-                <li><label>Modelo:</label> <input type="text" name="age" value="<?= !empty($_POST['edad'])?$_POST['edad']:$_GET['edad'] ?>"></li>
-                <li><label>Precio:</label> <input type="text" name="age" value="<?= !empty($_POST['edad'])?$_POST['edad']:$_GET['edad'] ?>"></li>
-                <li><label>Detalles:</label> <input type="text" name="age" value="<?= !empty($_POST['edad'])?$_POST['edad']:$_GET['edad'] ?>"></li>
-                <li><label>Unidades:</label> <input type="text" name="age" value="<?= !empty($_POST['edad'])?$_POST['edad']:$_GET['edad'] ?>"></li>
-                <li><label>Imagen:</label> <input type="text" name="age" value="<?= !empty($_POST['edad'])?$_POST['edad']:$_GET['edad'] ?>"></li>
+                <li><label>Nombre:</label> <input type="text" name="nombre" value="<?= !empty($_POST['nombre'])?$_POST['nombre']:$_GET['nombre'] ?>"></li>
+                <li><label>Marca:</label> <input type="text" name="marca" value="<?= !empty($_POST['marca'])?$_POST['marca']:$_GET['marca'] ?>"></li>
+                <li><label>Modelo:</label> <input type="text" name="modelo" value="<?= !empty($_POST['modelo'])?$_POST['modelo']:$_GET['modelo'] ?>"></li>
+                <li><label>Precio:</label> <input type="text" name="precio" value="<?= !empty($_POST['precio'])?$_POST['precio']:$_GET['precio'] ?>"></li>
+                <li><label>Detalles:</label> <input type="text" name="detalle" value="<?= !empty($_POST['detalle'])?$_POST['detalle']:$_GET['detalle'] ?>"></li>
+                <li><label>Unidades:</label> <input type="text" name="unidad" value="<?= !empty($_POST['unidad'])?$_POST['unidad']:$_GET['unidad'] ?>"></li>
+                <li><label>Imagen:</label> <input type="text" name="imagen" value="<?= !empty($_POST['imagen'])?$_POST['imagen']:$_GET['imagen'] ?>"></li>
             </ul>
         </fieldset>
         <p>
