@@ -8,22 +8,15 @@
 </head>
  
 <body>
-  <h1>Gestor de Productos</h1>
-  <p>Ingresa la información del producto en el siguiente formulario</p>
- 
- 
-    <form id="miFormulario" onsubmit="return validarFormulario()" action="procesar.php" method="POST">
+  <h1>Registro de Productos</h1>
+    <form id="miFormulario" onsubmit="return validarFormulario()" action="formulario.php" method="POST">
     
-    
-    <!-- Vinculando mi archivo JavaScript 
-    <script src="./validacion.js"></script> 
-    -->
-    
+    <!-- Vinculando mi archivo JavaScript <script src="./validacion.js"></script> -->
 
-    <h2>Datos de productos</h2>
+    <h2>Datos del vehiculo</h2>
  
     <fieldset>
-      <legend>Información</legend>
+      <legend>Ingresa la información del producto en el siguiente formulario</legend>
  
       <ul>
         <li><label for="form-name">Nombre:</label> <input type="text" name="nombre" id="form-name" maxlength="100" required></li>

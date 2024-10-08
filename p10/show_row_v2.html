@@ -21,11 +21,17 @@
                 y que pertenecen a la clase "row-data".
                 */
 
-                var name = data[0].innerText;
-                var age = data[1].innerText;
-                var img = data[2].firstChild.getAttribute('src');
+                var nombre = data[0].innerText;
+                var marca = data[1].innerText;
+                var modelo = data[2].innerText;
+                var precio = data[3].innerText;
+                var detalle = data[4].innerText;
+                var unidad = data[5].innerText;
+                var img = data[6].firstChild.getAttribute('src');
 
-                alert("Name: " + name + "\nAge: " + age+ "\nImg: " + img);
+                alert("Nombre: " + nombre + "\nMarca: " + marca+ "\nModelo: " + modelo + "Precio: " + precio + "\nDetalle: " + detalle+ "\nUnidad: " + unidad);
+                alert();
+
             }
 
             
@@ -35,21 +41,25 @@
         
         <table class="table">
             <tbody>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Age</th>
+                <tr id="Encabezado">
+                    <th scope="col">Num</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Detalle</th>
+                    <th scope="col">Unidad</th>
                     <th scope="col">Img</th>
-                    <th scope="col">Submit</th>
+                    <th scope="col">Enviar</th>
                 </tr>
 
                 <tr id="1">
                     <th scope="row">1</th>
-                    <td class="row-data">Sara</td>
-                    <td class="row-data">23</td>
+                    <td class="row-data">Vehiculo</td>
+                    <td class="row-data">Mazda</td>
                     <td class="row-data"><img src="cat.png" width="50" height="50"></td>
                     <td><input type="button" 
-                               value="submit" 
+                               value="Enviar" 
                                onclick="show()" /></td>
                 </tr>
 
@@ -72,6 +82,45 @@
                                value="submit" 
                                onclick="show()" /></td>
                 </tr>
+
+                <!-- GET -->
+                <script>
+                    function send2form(nombre, age) {     //form) { 
+                        var urlForm = "http://localhost/tecweb/practicas/p10/formulario_productos.php";
+                        var propName = "nombre="+nombre;
+                        var propAge = "edad="+age;
+                        window.open(urlForm+"?"+propName+"&"+propAge);
+                    }
+                </script>
+
+                <!-- POST -->
+                <script>
+                    function send2form(name, age) {
+                        var form = document.createElement("form");
+        
+                        var nombreIn = document.createElement("input");
+                        nombreIn.type = 'text';
+                        nombreIn.name = 'nombre';
+                        nombreIn.value = name;
+                        form.appendChild(nombreIn);
+        
+                        var edadIn = document.createElement("input");
+                        edadIn.type = 'text';
+                        edadIn.name = 'edad';
+                        edadIn.value = age;
+                        form.appendChild(edadIn);
+        
+                        console.log(form);
+        
+                        form.method = 'POST';
+                        form.action = 'http://localhost/tecweb/practicas/p10/formulario_productos.php';  
+        
+                        document.body.appendChild(form);
+                        form.submit();
+                    }
+                </script>
+
+
             </tbody>
         </table>
     </body>
